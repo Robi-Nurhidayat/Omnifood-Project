@@ -21,7 +21,7 @@ DEFAULT: 1
 PRIMARY: #e67e22
 
 - TINTS: #fdf2e9
-- SHADES:
+- SHADES: #cf711f
 - ACCENT:
 - GREYS: 
 #555
@@ -53,7 +53,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   line-height: 1;
   columns: #555;
@@ -95,7 +95,7 @@ body {
   font-size: 2rem;
   border-radius: 9px;
   display: inline-block;
-
+  font-weight: 600;
   /* untuk dapat melakukan animasi, harus di element orang tua atau original state */
   transition: background-color 0.3s;
 }
@@ -140,4 +140,37 @@ body {
 
 .hero-img {
   width: 100%;
+}
+
+.delivered-meals {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 8rem;
+  align-items: center;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child {
+  margin: 0;
+}
+
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
 }
