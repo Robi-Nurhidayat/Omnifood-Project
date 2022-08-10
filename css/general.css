@@ -145,7 +145,7 @@ body {
   display: inline-block;
   font-weight: 600;
   /* untuk dapat melakukan animasi, harus di element orang tua atau original state */
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn--full:link,
@@ -157,10 +157,6 @@ body {
 /* btn harus diberi jarak dengan margin */
 /* biasa akan di bungkus dengan div atau pada btn nya diberi langsung margin */
 /* tapi cara itu tidak baik, sebaik nya ditambah class pembantu saja */
-
-.margin-right-sm {
-  margin-right: 1.6rem !important;
-}
 
 .btn--full:hover,
 .btn--full:active {
@@ -188,4 +184,34 @@ body {
 
 strong {
   font-weight: 500;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
+
+/* Helper classes */
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
 }
