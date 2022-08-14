@@ -91,6 +91,21 @@ body {
     display: grid;
     column-gap: 6.4rem;
     row-gap: 9.6rem;
+    /* margin-bottom: 9.6rem; */
+}
+
+
+/* .grid:last-child {
+    margin-bottom: 0;
+} */
+
+
+/* kode dibawah arti nya selain dari elemen yang ada display grid nya elemen terakhir, 
+maka tambahkan margin botton, misal elemen ke 1, ke 2 dll selagi bukan elemen terakhir
+*/
+
+.grid:not(:last-child) {
+    margin-bottom: 9.6rem;
 }
 
 .grid--2-cols {
@@ -99,6 +114,10 @@ body {
 
 .grid--3-cols {
     grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .grid--center-v {
