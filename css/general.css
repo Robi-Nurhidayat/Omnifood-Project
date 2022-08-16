@@ -159,8 +159,14 @@ maka tambahkan margin botton, misal elemen ke 1, ke 2 dll selagi bukan elemen te
     letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
+    /* for btn */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    /*  */
     padding: 1.6rem 3.6rem;
     text-decoration: none;
     font-size: 2rem;
@@ -169,6 +175,18 @@ maka tambahkan margin botton, misal elemen ke 1, ke 2 dll selagi bukan elemen te
     font-weight: 600;
     /* untuk dapat melakukan animasi, harus di element orang tua atau original state */
     transition: all 0.3s;
+}
+
+.btn--form {
+    background-color: #45260a;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 1.2rem;
+}
+
+.btn--form:hover {
+    background-color: #fff;
+    color: #555;
 }
 
 .btn--full:link,
@@ -246,6 +264,11 @@ strong {
     display: flex;
     align-items: center;
     gap: 1.6rem;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 
