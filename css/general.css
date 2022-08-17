@@ -120,6 +120,10 @@ maka tambahkan margin botton, misal elemen ke 1, ke 2 dll selagi bukan elemen te
     grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5-cols {
+    grid-template-columns: repeat(5, 1fr);
+}
+
 .grid--center-v {
     align-items: center;
 }
