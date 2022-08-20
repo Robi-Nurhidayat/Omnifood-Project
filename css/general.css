@@ -56,236 +56,228 @@ medium : 11px
 */
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: "Rubik", sans-serif;
-    font-weight: 400;
-    line-height: 1;
-    columns: #555;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  columns: #555;
 }
-
 
 /* ================ */
 
-
 /* General Reusable Components */
-
 
 /* ================ */
 
 .container {
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 0 3.2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
 }
 
 .grid {
-    display: grid;
-    column-gap: 6.4rem;
-    row-gap: 9.6rem;
-    /* margin-bottom: 9.6rem; */
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+  /* margin-bottom: 9.6rem; */
 }
-
 
 /* .grid:last-child {
     margin-bottom: 0;
 } */
-
 
 /* kode dibawah arti nya selain dari elemen yang ada display grid nya elemen terakhir, 
 maka tambahkan margin botton, misal elemen ke 1, ke 2 dll selagi bukan elemen terakhir
 */
 
 .grid:not(:last-child) {
-    margin-bottom: 9.6rem;
+  margin-bottom: 9.6rem;
 }
 
 .grid--2-cols {
-    grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .grid--3-cols {
-    grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .grid--4-cols {
-    grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .grid--5-cols {
-    grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
-    align-items: center;
+  align-items: center;
 }
 
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: #333;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #333;
 }
 
 .heading-primary {
-    font-size: 5.2rem;
-    line-height: 1.05;
-    margin-bottom: 3.2rem;
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
 }
 
 .heading-secondary {
-    font-size: 4.4rem;
-    line-height: 1.2;
-    margin-bottom: 9.6rem;
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
 }
 
 .heading-tertiary {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 3.2rem;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
 }
 
 .subheading {
-    display: block;
-    font-size: 1.6rem;
-    color: #cf711f;
-    margin-bottom: 1.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.75px;
+  display: block;
+  font-size: 1.6rem;
+  color: #cf711f;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
 }
 
 .btn,
 .btn:link,
 .btn:visited {
-    /* for btn */
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    /*  */
-    padding: 1.6rem 3.6rem;
-    text-decoration: none;
-    font-size: 2rem;
-    border-radius: 9px;
-    display: inline-block;
-    font-weight: 600;
-    /* untuk dapat melakukan animasi, harus di element orang tua atau original state */
-    transition: all 0.3s;
+  /* for btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  /*  */
+  padding: 1.6rem 3.6rem;
+  text-decoration: none;
+  font-size: 2rem;
+  border-radius: 9px;
+  display: inline-block;
+  font-weight: 600;
+  /* untuk dapat melakukan animasi, harus di element orang tua atau original state */
+  transition: all 0.3s;
 }
 
 .btn--form {
-    background-color: #45260a;
-    color: #fdf2e9;
-    align-self: end;
-    padding: 1.2rem;
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
 }
 
 .btn--form:hover {
-    background-color: #fff;
-    color: #555;
+  background-color: #fff;
+  color: #555;
 }
 
 .btn--full:link,
 .btn--full:visited {
-    background-color: #e67e22;
-    color: #fff;
+  background-color: #e67e22;
+  color: #fff;
 }
-
 
 /* btn harus diberi jarak dengan margin */
 
-
 /* biasa akan di bungkus dengan div atau pada btn nya diberi langsung margin */
-
 
 /* tapi cara itu tidak baik, sebaik nya ditambah class pembantu saja */
 
 .btn--full:hover,
 .btn--full:active {
-    background-color: #cf711f;
+  background-color: #cf711f;
 }
 
 .btn--outline:link,
 .btn--outline:visited {
-    background-color: #fff;
-    color: #555;
+  background-color: #fff;
+  color: #555;
 }
 
 .btn--outline:hover,
 .btn--outline:active {
-    background-color: #fdf2e9;
-    /* untuk border akan di ganti ke box shadow */
-    /* border: 3px solid #fff; */
-    /* karena kalau pake border akan ada tambah space */
-    box-shadow: inset 0 0 0 3px #fff;
-    /* inset berfunsi untuk membuat shadow nya ke dalam element */
+  background-color: #fdf2e9;
+  /* untuk border akan di ganti ke box shadow */
+  /* border: 3px solid #fff; */
+  /* karena kalau pake border akan ada tambah space */
+  box-shadow: inset 0 0 0 3px #fff;
+  /* inset berfunsi untuk membuat shadow nya ke dalam element */
 }
 
 strong {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .link:link,
 .link:visited {
-    display: inline-block;
-    color: #e67e22;
-    text-decoration: none;
-    border-bottom: 1px solid currentColor;
-    padding-bottom: 2px;
-    transition: all 0.3s;
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: all 0.3s;
 }
 
 .link:hover,
 .link:active {
-    color: #cf711f;
-    border-bottom: 1px solid transparent;
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
 }
 
 .list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.6rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+  line-height: 1.2;
 }
 
 .list-icon {
-    color: #e67e22;
-    width: 3rem;
-    height: 3rem;
+  color: #e67e22;
+  width: 3rem;
+  height: 3rem;
 }
 
 .list-item {
-    font-size: 1.8rem;
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
 }
 
 *:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
-
 
 /* Helper classes */
 
 .margin-right-sm {
-    margin-right: 1.6rem !important;
+  margin-right: 1.6rem !important;
 }
 
 .margin-bottom-md {
-    margin-bottom: 4.8rem !important;
+  margin-bottom: 4.8rem !important;
 }
 
 .center-text {
-    text-align: center;
+  text-align: center;
 }
