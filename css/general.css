@@ -63,6 +63,7 @@ medium : 11px
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -70,6 +71,9 @@ body {
   font-weight: 400;
   line-height: 1;
   columns: #555;
+
+  /* overflox-x akan bekerja jika element induk nya position nya relative */
+  overflow-x: hidden;
 }
 
 /* ================ */

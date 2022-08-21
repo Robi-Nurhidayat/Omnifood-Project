@@ -107,4 +107,63 @@ berarti max-width = 1344px atau 84em
   .btn--form {
     margin-top: 1.2rem;
   }
+
+  /* mobile navigation */
+
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+    transform: translateX(100%);
+
+    /* hide navigation */
+
+    /* cara menyembunyikan navigasi ada beberapa cara */
+    /* 1) display:none */
+
+    /* 2) menggunakan opacity */
+    opacity: 0;
+
+    /* 3) membuatnya tidak dapat diakses oleh mouse dan keyboard */
+    pointer-events: none;
+
+    /* 4) menyembunyikan dari screen header */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
 }
