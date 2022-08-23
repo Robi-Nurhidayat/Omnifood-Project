@@ -154,7 +154,7 @@ berarti max-width = 1344px atau 84em
   }
 
   .icon-mobile-nav[name="menu-outline"] {
-    display: none;
+    display: block;
   }
 
   .main-nav-list {
