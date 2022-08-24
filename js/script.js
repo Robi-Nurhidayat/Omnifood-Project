@@ -1,6 +1,3 @@
-///////////////////////////////////////////////////////////
-// Fixing flexbox gap property missing in some Safari versions
-
 const getYear = new Date().getFullYear();
 
 document.querySelector(".year").textContent = getYear;
@@ -12,8 +9,44 @@ const headerEl = document.querySelector(".header");
 btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
+///////////////////////////////////////////////////////////
+// Fixing flexbox gap property missing in some Safari versions
 
-btn - mobile - nav;
+// smoothing scrolling animation
+
+const allLinks = document.querySelectorAll("a:link");
+allLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    // langsung scroll ke atas
+    if (href === "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+
+    // scroll ke link
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+
+    // close mobile navigation
+    // cara 1
+    if (link.classList.contains("main-nav-link")) {
+      headerEl.classList.toggle("nav-open");
+    }
+
+    // cara 2
+    // headerEl.classList.toggle("nav-open");
+  });
+});
+
 function checkFlexGap() {
   var flex = document.createElement("div");
   flex.style.display = "flex";

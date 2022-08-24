@@ -64,6 +64,8 @@ medium : 11px
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  /* tidak bekerja pada browser safari */
+  /* scroll-behavior: smooth; */
 }
 
 body {
