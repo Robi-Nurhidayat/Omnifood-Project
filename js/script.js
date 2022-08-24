@@ -5,6 +5,15 @@ const getYear = new Date().getFullYear();
 
 document.querySelector(".year").textContent = getYear;
 
+// make mobile navigation work
+
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
+
+btn - mobile - nav;
 function checkFlexGap() {
   var flex = document.createElement("div");
   flex.style.display = "flex";
